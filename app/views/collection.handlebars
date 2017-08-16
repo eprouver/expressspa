@@ -1,0 +1,18 @@
+<a href="/">Home</a>
+<h1>Collection name {{title }}: {{articles.length}}</h1>
+
+{{#each articles}}
+  <p>{{this.text}}</p>
+  {{else}}
+    <p class="empty">No content</p>
+{{/each}}
+
+<br/>
+<hr/>
+<br/>
+<form action="/{{title}}" method="post">
+  <h3>Add Record to {{title}}:</h3>
+  <input type="text" name="text" placeholder="Add Text"/>
+  <br>
+  <input type="submit" value="Submit">
+</form>
